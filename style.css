@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    background-color: rgb(2, 4, 20);
+    position: relative;
+
+}
+
+.background {
+    border: solid 5px rgb(104, 97, 96);
+    background-color: rgb(16, 15, 15);
+    width: 500%;
+    height: 75px;
+    position: relative;
+    top: 525px;
+    left: 0px;
+    border-left: 0px;
+}
+
+.devide {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    height: auto;
+}
+
+.surface {
+    border: rgb(120, 107, 107) 5px solid;
+    background-color: rgb(108, 53, 53);
+    color: rgb(9, 9, 9);
+    text-align: center;
+    padding: 2 px;
+    font-size: 20px;
+    width: 30px;
+    height: 200px;
+    position: fixed;
+    top: 90px;
+    left: 900px;
+    background-repeat: repeat-x;
+    z-index: 1;
+    animation: move 5s linear infinite;
+    position: relative;
+}
+
+.car {
+    position: relative;
+    top: 350px;
+    left: 50px;
+    z-index: 2;
+    animation: go 5s infinite linear;
+
+}
+
+@keyframes go {
+
+
+    from {
+        left: 2px;
+    }
+
+    to {
+        left: 1000px;
+    }
+
+    100% {
+        transform: translateX(+3450px);
+    }
+}
+
+img {
+    width: 250px;
+    height: 140px;
+}
+
+@keyframes move {
+    100% {
+        transform: translateX(-3450px);
+    }
+}
+
+.wheel-1 {
+    z-index: -1;
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    animation: rotate infinite 2s linear;
+}
+
+.wheel-2 {
+    z-index: -1;
+    position: absolute;
+    bottom: 9px;
+    left: 160px;
+    animation: rotate infinite 2s linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
